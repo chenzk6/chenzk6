@@ -18,6 +18,3 @@ Here are some ideas to get you started:
 [![GitHub Stats](https://github-stats-extended.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green)](https://github-stats-extended.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green)
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=chenzk6&layout=donut&langs_count=4&theme=shadow_green)](https://github-stats-extended.vercel.app/api/top-langs?username=chenzk6&layout=donut&langs_count=4&theme=shadow_green)
-
-
-[![GitHub Stats](https://github-stats-extended.vercel.app/api/pin?username=chenzk6&repo=chenzk6%2Fbridge_construction&show_owner=true&description_lines_count=3&theme=default)](https://github.com/chenzk6/bridge_construction)
