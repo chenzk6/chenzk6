@@ -11,7 +11,7 @@
   <img src="https://raw.githubusercontent.com/chenzk6/chenzk6/output/weather.svg" alt="Hangzhou Weather">
 </div>
 
-<div align="center">
+<!-- <div align="center">
   <a href="https://github-readme-stats.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green&card_width=400">
     <img src="https://github-readme-stats.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green&card_width=400" alt="GitHub Stats">
   </a>
@@ -21,8 +21,20 @@
   <a href="https://github-readme-stats.vercel.app/api/top-langs/?username=chenzk6&layout=donut&langs_count=4&theme=shadow_green&card_width=470">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chenzk6&layout=donut&langs_count=4&theme=shadow_green&card_width=470" alt="Top Languages">
   </a>
+</div> -->
+
+## 📊 GitHub Stats
+<div align="center">
+  <a href="https://github.com/chenzk6/chenzk6/blob/main/profile/stats.svg">
+    <img src="https://raw.githubusercontent.com/chenzk6/chenzk6/main/profile/stats.svg" alt="GitHub Stats">
+  </a>
 </div>
 
+<div align="center">
+  <a href="https://github.com/chenzk6/chenzk6/blob/main/profile/top-langs.svg">
+    <img src="https://raw.githubusercontent.com/chenzk6/chenzk6/main/profile/top-langs.svg" alt="Top Languages">
+  </a>
+</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chenzk6/chenzk6/output/github-contribution-grid-snake-dark.svg">
