@@ -30,6 +30,6 @@ jobs:
           git checkout output || git checkout -b output origin/output
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add output/weather.svg
+          git add weather.svg
           git commit -m "update weather" || echo "no change"
           git push origin output
