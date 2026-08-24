@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="158" viewBox="0 0 800 158" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="158" rx="12" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="157" rx="11.5" fill="none" stroke="#30363d" stroke-width="1"/>
+  <rect x="28" y="30" width="6" height="104" rx="3" fill="#3fb950"/>
+  <text x="52" y="66" font-size="30" font-weight="700" fill="#e6edf3"><tspan>Chen Zikun</tspan> <tspan fill="#8b949e" font-weight="400">· 陈子坤</tspan></text>
+  <text x="52" y="96" font-size="16" fill="#c9d1d9">Embodied AI · Robot Learning · LLM Agent</text>
+  <text x="52" y="124" font-size="13" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">github.com/chenzk6  ·  czk2929337684@163.com  ·  chenzk6.github.io</text>
+</svg>

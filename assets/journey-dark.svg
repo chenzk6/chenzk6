@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="134" viewBox="0 0 800 134" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="134" rx="12" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="799" height="133" rx="11.5" fill="none" stroke="#30363d" stroke-width="1"/>
+<text x="28" y="38" font-size="14" font-weight="600" fill="#8b949e"><tspan fill="#3fb950">&#9646;</tspan> Journey</text>
+  <text x="133" y="82" text-anchor="middle" font-size="30" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">2025</text>
+  <text x="133" y="108" text-anchor="middle" font-size="13" fill="#8b949e">Joined</text>
+  <text x="400" y="82" text-anchor="middle" font-size="30" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">8</text>
+  <text x="400" y="108" text-anchor="middle" font-size="13" fill="#8b949e">Public repos</text>
+  <text x="667" y="82" text-anchor="middle" font-size="30" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">48</text>
+  <text x="667" y="108" text-anchor="middle" font-size="13" fill="#8b949e">Events · last 30d</text>
+</svg>
