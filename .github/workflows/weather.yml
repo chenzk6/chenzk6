@@ -9,19 +9,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 第一步：从 main 检出，拿到 weather.py 脚本
       - uses: actions/checkout@v5
         with:
-          ref: output        # 切到 output 分支
+          ref: main
           fetch-depth: 0
 
+      # 第二步：跑脚本，生成 output/weather.svg
       - name: Generate weather SVG
         run: python .github/scripts/weather.py
 
-      - name: Verify file generated
-        run: ls -la output/weather.svg   # 确认文件真的生成了
+      # 第三步：确认文件生成了
+      - name: Verify
+        run: ls -la output/weather.svg
 
+      # 第四步：切换到 output 分支，只提交 SVG
       - name: Commit & push to output
         run: |
+          git fetch origin output
+          git checkout output || git checkout -b output origin/output
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add output/weather.svg
