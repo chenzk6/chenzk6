@@ -1,4 +1,5 @@
-import urllib.request, json, datetime
+import urllib.request, json, datetime, os
+
 LAT, LON = 30.2741, 120.1551
 url = f"https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia%2FShanghai&forecast_days=7"
 data = json.load(urllib.request.urlopen(url))
@@ -18,4 +19,6 @@ for i in range(7):
     svg.append(f'<text x="{x}" y="74" font-size="18">{icon(wc[i])}</text>')
     svg.append(f'<text x="{x}" y="96" font-size="12">{int(mins[i])}°/{int(maxs[i])}°</text>')
 svg.append('</svg>')
+
+os.makedirs("output", exist_ok=True)
 open("output/weather.svg","w",encoding="utf-8").write("\n".join(svg))
