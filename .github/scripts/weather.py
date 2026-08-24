@@ -21,4 +21,4 @@ for i in range(7):
 svg.append('</svg>')
 
 os.makedirs("output", exist_ok=True)
-open("output/weather.svg","w",encoding="utf-8").write("\n".join(svg))
+open("weather.svg","w",encoding="utf-8").write("\n".join(svg))
