@@ -1,52 +1,42 @@
 name: Weather SVG
 on:
   schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
+    - cron: "0 */6 * * *"   # 每6小时更新一次
+  workflow_dispatch:          # 支持手动触发
 permissions:
   contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 1. 从 main 检出，拿到 .github/scripts/weather.py
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+          path: repo-main
+
+      # 2. 用 main 里的脚本，把 SVG 生成到 repo-main/output/weather.svg
+      - name: Generate weather SVG
+        working-directory: repo-main
+        run: python .github/scripts/weather.py
+
+      # 3. 确认文件生成
+      - name: Verify
+        run: ls -la repo-main/output/weather.svg
+
+      # 4. 检出 output 分支，把生成的 SVG 复制进去并提交
       - uses: actions/checkout@v5
         with:
           ref: output
           fetch-depth: 0
+          path: repo-output
 
-      - name: Generate weather SVG
-        run: |
-          python -c '
-import urllib.request, json, datetime
+      - name: Copy SVG into output branch
+        run: cp repo-main/output/weather.svg repo-output/weather.svg
 
-LAT, LON = 30.2741, 120.1551
-url = f"https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia%2FShanghai&forecast_days=7"
-data = json.load(urllib.request.urlopen(url))
-days = data["daily"]["time"]
-maxs = data["daily"]["temperature_2m_max"]
-mins = data["daily"]["temperature_2m_min"]
-wc = data["daily"]["weathercode"]
-
-def icon(c):
-    return {0:"☀️",1:"🌤",2:"⛅️",3:"☁️",61:"🌧",71:"❄️",95:"⛈"}.get(c,"🌡")
-
-svg = [f"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"420\" height=\"120\">"]
-svg.append(f"<text x=\"10\" y=\"24\" font-size=\"16\">杭州天气 {datetime.date.today()}</text>")
-for i in range(7):
-    x = 10 + i*60
-    svg.append(f"<text x=\"{x}\" y=\"50\" font-size=\"12\">{days[i][5:]}</text>")
-    svg.append(f"<text x=\"{x}\" y=\"74\" font-size=\"18\">{icon(wc[i])}</text>")
-    svg.append(f"<text x=\"{x}\" y=\"96\" font-size=\"12\">{int(mins[i])}°/{int(maxs[i])}°</text>")
-svg.append("</svg>")
-
-with open("weather.svg", "w", encoding="utf-8") as f:
-    f.write("\n".join(svg))
-'
-
-      - name: Verify
-        run: ls -la weather.svg
-
-      - name: Commit & push
+      - name: Commit & push to output
+        working-directory: repo-output
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
