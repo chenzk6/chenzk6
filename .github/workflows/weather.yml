@@ -1,0 +1,19 @@
+name: Weather SVG
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # 每6小时一次
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python .github/scripts/weather.py
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add output/weather.svg
+          git commit -m "update weather" || echo "no change"
+          git push
