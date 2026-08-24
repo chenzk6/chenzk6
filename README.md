@@ -11,9 +11,9 @@
 <img src="https://raw.githubusercontent.com/chenzk6/chenzk6/output/weather.svg" alt="Hangzhou Weather">
 </div>
 
-[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green)](https://github-stats-extended.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green&card_width=400)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green)](https://github-stats-extended.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green&card_width=600)
 
-[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=chenzk6&layout=donut&langs_count=4&theme=shadow_green)](https://github-stats-extended.vercel.app/api/top-langs?username=chenzk6&layout=donut&langs_count=4&theme=shadow_green&card_width=400)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=chenzk6&layout=donut&langs_count=4&theme=shadow_green)](https://github-stats-extended.vercel.app/api/top-langs?username=chenzk6&layout=donut&langs_count=4&theme=shadow_green&card_width=600)
 
 
 
