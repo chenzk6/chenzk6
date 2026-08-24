@@ -1,7 +1,7 @@
 name: Weather SVG
 on:
   schedule:
-    - cron: "0 */6 * * *"   # 每6小时一次
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -10,10 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - run: python .github/scripts/weather.py
-      - run: |
+        with:
+          ref: output        # 切到 output 分支
+          fetch-depth: 0
+
+      - name: Generate weather SVG
+        run: python .github/scripts/weather.py
+
+      - name: Verify file generated
+        run: ls -la output/weather.svg   # 确认文件真的生成了
+
+      - name: Commit & push to output
+        run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add output/weather.svg
           git commit -m "update weather" || echo "no change"
-          git push
+          git push origin output
