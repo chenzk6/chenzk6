@@ -1,5 +1,5 @@
 # Hi, I'm 陈子坤~ 👋
-> 具身智能 / 系统方向研究生，喜欢把大模型塞进有意思的管道里
+
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=laojiahuo2003&show_icons=true&theme=default)
 
 [![GitHub Stats](https://github-stats-extended.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green)](https://github-stats-extended.vercel.app/api?username=chenzk6&rank_icon=github&show_icons=true&include_all_commits=true&theme=shadow_green)
