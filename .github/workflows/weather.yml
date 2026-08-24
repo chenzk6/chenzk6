@@ -21,7 +21,7 @@ jobs:
 
       # 第三步：确认文件生成了
       - name: Verify
-        run: ls -la output/weather.svg
+        run: ls -la weather.svg
 
       # 第四步：切换到 output 分支，只提交 SVG
       - name: Commit & push to output
