@@ -6,6 +6,8 @@
   </picture>
 </p>
 
+<br>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chenzk6/chenzk6/main/assets/typing-dark.svg">
@@ -13,6 +15,8 @@
     <img alt="打字机自我介绍" src="https://raw.githubusercontent.com/chenzk6/chenzk6/main/assets/typing.svg" width="100%" />
   </picture>
 </p>
+
+<br>
 
 <p align="center">
   <picture>
@@ -22,6 +26,8 @@
   </picture>
 </p>
 
+<br>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chenzk6/chenzk6/main/assets/projects-dark.svg">
@@ -29,6 +35,8 @@
     <img alt="项目精选" src="https://raw.githubusercontent.com/chenzk6/chenzk6/main/assets/projects.svg" width="100%" />
   </picture>
 </p>
+
+<br>
 
 <p align="center">
   <picture>
@@ -38,6 +46,8 @@
   </picture>
 </p>
 
+<br>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chenzk6/chenzk6/main/assets/weather-dark.svg">
@@ -45,6 +55,8 @@
     <img alt="杭州实时天气" src="https://raw.githubusercontent.com/chenzk6/chenzk6/main/assets/weather.svg" width="100%" />
   </picture>
 </p>
+
+<br>
 
 <p align="center">
   <picture>
@@ -54,6 +66,8 @@
   </picture>
 </p>
 
+<br>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chenzk6/chenzk6/main/assets/snake-dark.svg">
@@ -61,3 +75,5 @@
     <img alt="贡献贪吃蛇" src="https://raw.githubusercontent.com/chenzk6/chenzk6/main/assets/snake.svg" width="80%" />
   </picture>
 </p>
+
+<br>
