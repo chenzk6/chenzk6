@@ -135,52 +135,65 @@ def build_banner(theme):
 # ---------------------------------------------------------------------------
 def build_typing(theme):
     c = THEMES[theme]
-    # Typewriter: reveal the phrase left-to-right with a moving clip, hold it,
-    # then erase it; the two phrases alternate. A cursor tracks the reveal and
-    # blinks on its own 1s loop.
+    # Typewriter: each character pops in one at a time (discrete steps) like
+    # real keyboard input, then the phrase is erased and the next one typed.
+    # Every char is its own <tspan> with a discrete opacity step, so the font
+    # handles spacing (no fixed char-width assumption). A cursor jumps with the
+    # typing and blinks on its own 1s loop.
     if not TYPING_LINES:
         return svg_doc(theme, 92, "")
 
-    char_w = 12  # approx monospace advance at font-size 20
-    full = max(len(p) for p in TYPING_LINES) * char_w
-    dur = 14
-    # clip width: type1 -> hold1 -> erase1 -> (swap) -> type2 -> hold2 -> erase2
-    key_times = "0; 0.35; 0.46; 0.49; 0.51; 0.86; 0.97; 0.99; 1"
-    clip_pattern = [0, full, full, 0, 0, full, full, 0, 0]
-    clip_values = "; ".join(str(v) for v in clip_pattern)
-    cursor_xs = "; ".join(f"{28 + v} 0" for v in clip_pattern)
+    char_w = 11       # monospace advance at font-size 20 (cursor tracking only)
+    dur = 14          # seconds per full loop
 
-    parts = [
-        "<defs>",
-        f'  <clipPath id="typing-clip">'
-        f'<rect x="28" y="22" width="0" height="46">'
-        f'<animate attributeName="width" values="{clip_values}" keyTimes="{key_times}" '
-        f'dur="{dur}s" repeatCount="indefinite"/>'
-        f'</rect></clipPath>',
-        "</defs>",
-    ]
+    def type_t(p, i, n):
+        s = 0.02 if p == 0 else 0.50
+        e = 0.32 if p == 0 else 0.80
+        return s if n <= 1 else s + (e - s) * i / (n - 1)
 
-    for i, phrase in enumerate(TYPING_LINES):
-        if i == 0:
-            op_vals, op_times = "1; 1; 0; 0", "0; 0.5; 0.52; 1"
-        else:
-            op_vals, op_times = "0; 0; 1; 1", "0; 0.5; 0.52; 1"
-        parts.append(
+    def erase_t(p, i, n):
+        # backspace: rightmost char vanishes first
+        s = 0.44 if p == 0 else 0.92
+        e = 0.47 if p == 0 else 0.95
+        return s if n <= 1 else s + (e - s) * (n - 1 - i) / (n - 1)
+
+    texts = []
+    cursor_events = [(0.0, 28.0), (1.0, 28.0)]
+
+    for p, phrase in enumerate(TYPING_LINES):
+        n = len(phrase)
+        spans = []
+        for i, ch in enumerate(phrase):
+            a = type_t(p, i, n)
+            b = erase_t(p, i, n)
+            glyph = "&#160;" if ch == " " else esc(ch)
+            spans.append(
+                f'<tspan>{glyph}'
+                f'<animate attributeName="opacity" values="0; 1; 0; 0" '
+                f'keyTimes="0; {a:.4f}; {b:.4f}; 1" calcMode="discrete" '
+                f'dur="{dur}s" repeatCount="indefinite"/></tspan>'
+            )
+            cursor_events.append((a, 28.0 + (i + 1) * char_w))
+            cursor_events.append((b, 28.0 + i * char_w))
+        texts.append(
             f'  <text x="28" y="52" font-size="20" font-family="{MONO}" '
-            f'fill="{c["title"]}" clip-path="url(#typing-clip)">{esc(phrase)}'
-            f'<animate attributeName="opacity" values="{op_vals}" keyTimes="{op_times}" '
-            f'dur="{dur}s" repeatCount="indefinite"/></text>'
+            f'fill="{c["title"]}">{"".join(spans)}</text>'
         )
 
-    parts.append(
+    cursor_events.sort()
+    times = [t for t, _ in cursor_events]
+    xs = [x for _, x in cursor_events]
+    cursor = (
         f'  <text y="52" font-size="20" font-family="{MONO}" fill="{c["accent"]}">|'
         f'<animateTransform attributeName="transform" type="translate" '
-        f'values="{cursor_xs}" keyTimes="{key_times}" dur="{dur}s" repeatCount="indefinite"/>'
+        f'values="{"; ".join(f"{x:.0f} 0" for x in xs)}" '
+        f'keyTimes="{"; ".join(f"{t:.4f}" for t in times)}" calcMode="discrete" '
+        f'dur="{dur}s" repeatCount="indefinite"/>'
         f'<animate attributeName="opacity" values="1; 1; 0; 0; 1; 1" '
         f'keyTimes="0; 0.5; 0.6; 0.7; 0.9; 1" dur="1s" repeatCount="indefinite"/></text>'
     )
 
-    return svg_doc(theme, 92, "\n".join(parts))
+    return svg_doc(theme, 92, "\n".join(texts + [cursor]))
 
 
 # ---------------------------------------------------------------------------
