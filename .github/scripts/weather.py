@@ -56,10 +56,6 @@ def build_svg(data, theme):
     )
     svg.append(f'<rect x="0" y="0" width="{WIDTH}" height="150" rx="12" fill="{c["bg"]}"/>')
     svg.append(
-        f'<rect x="0.5" y="0.5" width="{WIDTH - 1}" height="149" rx="11.5" '
-        f'fill="none" stroke="{c["border"]}" stroke-width="1"/>'
-    )
-    svg.append(
         f'<text x="28" y="34" font-size="14" font-weight="600" fill="{c["muted"]}">'
         f'<tspan fill="{c["accent"]}">&#9646;</tspan> 杭州天气 · Hangzhou · {datetime.date.today()}</text>'
     )

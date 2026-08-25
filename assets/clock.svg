@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="254" viewBox="0 0 800 254" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
   <rect x="0" y="0" width="800" height="254" rx="12" fill="#ffffff"/>
-  <rect x="0.5" y="0.5" width="799" height="253" rx="11.5" fill="none" stroke="#d0d7de" stroke-width="1"/>
 <text x="28" y="38" font-size="14" font-weight="600" fill="#8b949e"><tspan fill="#2da44e">&#9646;</tspan> When I Code  ·  24h Asia/Shanghai</text>
   <rect x="370.0" y="189.4" width="24.0" height="6.6" rx="3" fill="#dafbe1"/>
   <rect x="430.0" y="136.3" width="24.0" height="59.7" rx="3" fill="#dafbe1"/>

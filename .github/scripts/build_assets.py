@@ -89,8 +89,6 @@ def svg_doc(theme, height, inner):
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{height}" '
         f'viewBox="0 0 {WIDTH} {height}" font-family="{SANS}">\n'
         f'  <rect x="0" y="0" width="{WIDTH}" height="{height}" rx="12" fill="{c["bg"]}"/>\n'
-        f'  <rect x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1}" rx="11.5" '
-        f'fill="none" stroke="{c["border"]}" stroke-width="1"/>\n'
         f"{inner}\n</svg>"
     )
 

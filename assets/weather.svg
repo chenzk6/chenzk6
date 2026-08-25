@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="150" viewBox="0 0 800 150" font-family="'Segoe UI', system-ui, sans-serif">
 <rect x="0" y="0" width="800" height="150" rx="12" fill="#ffffff"/>
-<rect x="0.5" y="0.5" width="799" height="149" rx="11.5" fill="none" stroke="#d0d7de" stroke-width="1"/>
 <text x="28" y="34" font-size="14" font-weight="600" fill="#8b949e"><tspan fill="#2da44e">&#9646;</tspan> 杭州天气 · Hangzhou · 2026-08-24</text>
 <text x="81.1" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-25</text>
 <text x="81.1" y="96" font-size="24" text-anchor="middle">⛈</text>

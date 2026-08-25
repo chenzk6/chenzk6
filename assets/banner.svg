@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="158" viewBox="0 0 800 158" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
   <rect x="0" y="0" width="800" height="158" rx="12" fill="#ffffff"/>
-  <rect x="0.5" y="0.5" width="799" height="157" rx="11.5" fill="none" stroke="#d0d7de" stroke-width="1"/>
   <rect x="28" y="30" width="6" height="104" rx="3" fill="#2da44e"/>
   <text x="52" y="66" font-size="30" font-weight="700" fill="#24292f"><tspan>Chen Zikun</tspan> <tspan fill="#8b949e" font-weight="400">· 陈子坤</tspan></text>
   <text x="52" y="96" font-size="16" fill="#57606a">Embodied AI · Robot Learning · LLM Agent</text>
