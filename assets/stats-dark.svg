@@ -1,15 +1,19 @@
-
-    <svg width="576.5"  height="120" viewBox="0 0 576.5 120" fill="#0d1117" xmlns="http://www.w3.org/2000/svg">
-    <style>
-    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e6edf3 }
-    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9 }
-    .gray { fill: #858585 }
-    </style>
-    <rect x="0.5" y="0.5" width="575.5" height="99%" rx="4.5" fill="#0d1117" stroke="#e4e2e2"/>
-    <text x="25" y="45" class="text">Something went wrong! file an issue at https://tiny.one/readme-stats</text>
-    <text data-testid="message" x="25" y="55" class="text small">
-      <tspan x="25" dy="18">Resource not accessible by integration</tspan>
-      <tspan x="25" dy="18" class="gray">OK</tspan>
-    </text>
-    </svg>
-  
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="196" viewBox="0 0 800 196" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="196" rx="12" fill="#0d1117"/>
+<text x="28" y="38" font-size="14" font-weight="600" fill="#8b949e"><tspan fill="#3fb950">&#9646;</tspan> GitHub Stats</text>
+  <text x="121.0" y="80" text-anchor="middle" font-size="28" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">0</text>
+  <text x="121.0" y="106" text-anchor="middle" font-size="13" fill="#8b949e">Stars</text>
+  <text x="307.0" y="80" text-anchor="middle" font-size="28" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">1</text>
+  <text x="307.0" y="106" text-anchor="middle" font-size="13" fill="#8b949e">Forks</text>
+  <text x="493.0" y="80" text-anchor="middle" font-size="28" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">0</text>
+  <text x="493.0" y="106" text-anchor="middle" font-size="13" fill="#8b949e">Followers</text>
+  <text x="679.0" y="80" text-anchor="middle" font-size="28" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">2</text>
+  <text x="679.0" y="106" text-anchor="middle" font-size="13" fill="#8b949e">Following</text>
+  <text x="28" y="124" font-size="12" fill="#8b949e">Most used languages</text>
+  <rect x="28.0" y="132" width="248.0" height="12" fill="#e34c26"/>
+  <rect x="276.0" y="132" width="248.0" height="12" fill="#555555"/>
+  <rect x="524.0" y="132" width="248.0" height="12" fill="#8b949e"/>
+  <circle cx="32.0" cy="160" r="4" fill="#e34c26"/><text x="44.0" y="164" font-size="12" fill="#c9d1d9">HTML 33%</text>
+  <circle cx="218.0" cy="160" r="4" fill="#555555"/><text x="230.0" y="164" font-size="12" fill="#c9d1d9">C 33%</text>
+  <circle cx="404.0" cy="160" r="4" fill="#8b949e"/><text x="416.0" y="164" font-size="12" fill="#c9d1d9">Batchfile 33%</text>
+</svg>
