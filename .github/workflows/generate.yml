@@ -1,6 +1,8 @@
 name: Generate profile assets
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
@@ -20,7 +22,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Generate custom cards (banner/typing/journey/projects/clock)
+      - name: Generate custom cards (banner/typing/journey/projects/clock/stats)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/build_assets.py
