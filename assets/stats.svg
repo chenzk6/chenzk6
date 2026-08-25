@@ -10,10 +10,12 @@
   <text x="679.0" y="80" text-anchor="middle" font-size="28" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#2da44e">2</text>
   <text x="679.0" y="106" text-anchor="middle" font-size="13" fill="#8b949e">Following</text>
   <text x="28" y="124" font-size="12" fill="#8b949e">Most used languages</text>
-  <rect x="28.0" y="132" width="248.0" height="12" fill="#e34c26"/>
-  <rect x="276.0" y="132" width="248.0" height="12" fill="#555555"/>
-  <rect x="524.0" y="132" width="248.0" height="12" fill="#8b949e"/>
-  <circle cx="32.0" cy="160" r="4" fill="#e34c26"/><text x="44.0" y="164" font-size="12" fill="#57606a">HTML 33%</text>
-  <circle cx="218.0" cy="160" r="4" fill="#555555"/><text x="230.0" y="164" font-size="12" fill="#57606a">C 33%</text>
-  <circle cx="404.0" cy="160" r="4" fill="#8b949e"/><text x="416.0" y="164" font-size="12" fill="#57606a">Batchfile 33%</text>
+  <rect x="28.0" y="132" width="186.0" height="12" fill="#3572A5"/>
+  <rect x="214.0" y="132" width="186.0" height="12" fill="#e34c26"/>
+  <rect x="400.0" y="132" width="186.0" height="12" fill="#555555"/>
+  <rect x="586.0" y="132" width="186.0" height="12" fill="#8b949e"/>
+  <circle cx="32.0" cy="160" r="4" fill="#3572A5"/><text x="44.0" y="164" font-size="12" fill="#57606a">Python 25%</text>
+  <circle cx="218.0" cy="160" r="4" fill="#e34c26"/><text x="230.0" y="164" font-size="12" fill="#57606a">HTML 25%</text>
+  <circle cx="404.0" cy="160" r="4" fill="#555555"/><text x="416.0" y="164" font-size="12" fill="#57606a">C 25%</text>
+  <circle cx="590.0" cy="160" r="4" fill="#8b949e"/><text x="602.0" y="164" font-size="12" fill="#57606a">Batchfile 25%</text>
 </svg>
