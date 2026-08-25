@@ -135,29 +135,52 @@ def build_banner(theme):
 # ---------------------------------------------------------------------------
 def build_typing(theme):
     c = THEMES[theme]
-    # Two phrases alternate with a fade; a cursor blinks to the right of the
-    # longest line (positioned for ~43 chars at font-size 20 monospace).
-    lines = []
+    # Typewriter: reveal the phrase left-to-right with a moving clip, hold it,
+    # then erase it; the two phrases alternate. A cursor tracks the reveal and
+    # blinks on its own 1s loop.
+    if not TYPING_LINES:
+        return svg_doc(theme, 92, "")
+
+    char_w = 12  # approx monospace advance at font-size 20
+    full = max(len(p) for p in TYPING_LINES) * char_w
+    dur = 14
+    # clip width: type1 -> hold1 -> erase1 -> (swap) -> type2 -> hold2 -> erase2
+    key_times = "0; 0.35; 0.46; 0.49; 0.51; 0.86; 0.97; 0.99; 1"
+    clip_pattern = [0, full, full, 0, 0, full, full, 0, 0]
+    clip_values = "; ".join(str(v) for v in clip_pattern)
+    cursor_xs = "; ".join(f"{28 + v} 0" for v in clip_pattern)
+
+    parts = [
+        "<defs>",
+        f'  <clipPath id="typing-clip">'
+        f'<rect x="28" y="22" width="0" height="46">'
+        f'<animate attributeName="width" values="{clip_values}" keyTimes="{key_times}" '
+        f'dur="{dur}s" repeatCount="indefinite"/>'
+        f'</rect></clipPath>',
+        "</defs>",
+    ]
+
     for i, phrase in enumerate(TYPING_LINES):
         if i == 0:
-            vals = "1;1;0;0;1"
+            op_vals, op_times = "1; 1; 0; 0", "0; 0.5; 0.52; 1"
         else:
-            vals = "0;0;1;1;0"
-        lines.append(
-            f'  <text x="400" y="52" text-anchor="middle" font-size="20" '
-            f'font-family="{MONO}" fill="{c["title"]}">{esc(phrase)}'
-            f'<animate attributeName="opacity" values="{vals}" '
-            f'keyTimes="0;0.44;0.5;0.94;1" dur="8s" repeatCount="indefinite"/>'
-            f'</text>'
+            op_vals, op_times = "0; 0; 1; 1", "0; 0.5; 0.52; 1"
+        parts.append(
+            f'  <text x="28" y="52" font-size="20" font-family="{MONO}" '
+            f'fill="{c["title"]}" clip-path="url(#typing-clip)">{esc(phrase)}'
+            f'<animate attributeName="opacity" values="{op_vals}" keyTimes="{op_times}" '
+            f'dur="{dur}s" repeatCount="indefinite"/></text>'
         )
-    lines.append(
-        f'  <text x="672" y="52" text-anchor="middle" font-size="20" '
-        f'font-family="{MONO}" fill="{c["accent"]}">|'
-        f'<animate attributeName="opacity" values="1;1;0;0;1;1" '
-        f'keyTimes="0;0.5;0.6;0.7;0.9;1" dur="1s" repeatCount="indefinite"/>'
-        f'</text>'
+
+    parts.append(
+        f'  <text y="52" font-size="20" font-family="{MONO}" fill="{c["accent"]}">|'
+        f'<animateTransform attributeName="transform" type="translate" '
+        f'values="{cursor_xs}" keyTimes="{key_times}" dur="{dur}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="opacity" values="1; 1; 0; 0; 1; 1" '
+        f'keyTimes="0; 0.5; 0.6; 0.7; 0.9; 1" dur="1s" repeatCount="indefinite"/></text>'
     )
-    return svg_doc(theme, 92, "\n".join(lines))
+
+    return svg_doc(theme, 92, "\n".join(parts))
 
 
 # ---------------------------------------------------------------------------
