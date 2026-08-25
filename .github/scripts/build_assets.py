@@ -145,6 +145,7 @@ def build_typing(theme):
 
     char_w = 11       # monospace advance at font-size 20 (cursor tracking only)
     dur = 14          # seconds per full loop
+    cx = WIDTH / 2.0  # horizontal center of the card
 
     def type_t(p, i, n):
         s = 0.02 if p == 0 else 0.50
@@ -158,10 +159,11 @@ def build_typing(theme):
         return s if n <= 1 else s + (e - s) * (n - 1 - i) / (n - 1)
 
     texts = []
-    cursor_events = [(0.0, 28.0), (1.0, 28.0)]
+    cursor_events = []
 
     for p, phrase in enumerate(TYPING_LINES):
         n = len(phrase)
+        off = cx - n * char_w / 2.0   # left edge of this centered phrase
         spans = []
         for i, ch in enumerate(phrase):
             a = type_t(p, i, n)
@@ -173,12 +175,15 @@ def build_typing(theme):
                 f'keyTimes="0; {a:.4f}; {b:.4f}; 1" calcMode="discrete" '
                 f'dur="{dur}s" repeatCount="indefinite"/></tspan>'
             )
-            cursor_events.append((a, 28.0 + (i + 1) * char_w))
-            cursor_events.append((b, 28.0 + i * char_w))
+            cursor_events.append((a, off + (i + 1) * char_w))
+            cursor_events.append((b, off + i * char_w))
         texts.append(
-            f'  <text x="28" y="52" font-size="20" font-family="{MONO}" '
-            f'fill="{c["title"]}">{"".join(spans)}</text>'
+            f'  <text x="{cx:.0f}" y="52" text-anchor="middle" font-size="20" '
+            f'font-family="{MONO}" fill="{c["title"]}">{"".join(spans)}</text>'
         )
+
+    off0 = cx - len(TYPING_LINES[0]) * char_w / 2.0
+    cursor_events += [(0.0, off0), (1.0, off0)]
 
     cursor_events.sort()
     times = [t for t, _ in cursor_events]
