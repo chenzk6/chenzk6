@@ -362,6 +362,77 @@ def build_clock(theme, counts):
 
 
 # ---------------------------------------------------------------------------
+# Stats (stars / forks / followers / following + top languages)
+# ---------------------------------------------------------------------------
+def build_stats(theme, user, repos):
+    c = THEMES[theme]
+    if not isinstance(repos, list):
+        repos = []
+    total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+    total_forks = sum(r.get("forks_count", 0) for r in repos)
+    followers = user.get("followers", 0)
+    following = user.get("following", 0)
+
+    metrics = [
+        (str(total_stars), "Stars"),
+        (str(total_forks), "Forks"),
+        (str(followers), "Followers"),
+        (str(following), "Following"),
+    ]
+    inner = [section_title(theme, 38, "GitHub Stats")]
+    step = (WIDTH - 56) / 4
+    for i, (value, label) in enumerate(metrics):
+        x = 28 + step * (i + 0.5)
+        inner.append(
+            f'  <text x="{x:.1f}" y="80" text-anchor="middle" font-size="28" '
+            f'font-weight="700" font-family="{MONO}" fill="{c["accent"]}">{esc(value)}</text>'
+        )
+        inner.append(
+            f'  <text x="{x:.1f}" y="106" text-anchor="middle" font-size="13" '
+            f'fill="{c["muted"]}">{esc(label)}</text>'
+        )
+
+    # Most-used languages (exclude forks, count by repo)
+    lang_counts = {}
+    for r in repos:
+        if r.get("fork"):
+            continue
+        lang = r.get("language")
+        if lang:
+            lang_counts[lang] = lang_counts.get(lang, 0) + 1
+    top = sorted(lang_counts.items(), key=lambda kv: kv[1], reverse=True)[:4]
+
+    if top:
+        total = sum(n for _, n in top)
+        inner.append(
+            f'  <text x="28" y="124" font-size="12" fill="{c["muted"]}">Most used languages</text>'
+        )
+        x, by, bw, bh = 28, 132, WIDTH - 56, 12
+        for lang, n in top:
+            w = bw * n / total
+            color = LANG_COLORS.get(lang, c["muted"])
+            inner.append(
+                f'  <rect x="{x:.1f}" y="{by}" width="{w:.1f}" height="{bh}" fill="{color}"/>'
+            )
+            x += w
+        for i, (lang, n) in enumerate(top):
+            color = LANG_COLORS.get(lang, c["muted"])
+            pct = round(n * 100 / total)
+            label = lang if len(lang) <= 14 else lang[:13] + "…"
+            lx = 28 + step * i
+            inner.append(
+                f'  <circle cx="{lx + 4}" cy="160" r="4" fill="{color}"/>'
+                f'<text x="{lx + 16}" y="164" font-size="12" fill="{c["text"]}">'
+                f'{esc(label)} {pct}%</text>'
+            )
+        height = 196
+    else:
+        height = 134
+
+    return svg_doc(theme, height, "\n".join(inner))
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def write(name, svg, theme):
@@ -385,6 +456,7 @@ def main():
         write("journey", build_journey(theme, user, events), theme)
         write("projects", build_projects(theme, repos), theme)
         write("clock", build_clock(theme, counts), theme)
+        write("stats", build_stats(theme, user, repos), theme)
     print("done")
 
 
