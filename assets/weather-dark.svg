@@ -3,7 +3,7 @@
 <text x="28" y="34" font-size="14" font-weight="600" fill="#8b949e"><tspan fill="#3fb950">&#9646;</tspan> 杭州天气 · Hangzhou · 2026-08-26</text>
 <text x="81.1" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-26</text>
 <text x="81.1" y="96" font-size="24" text-anchor="middle">🌡</text>
-<text x="81.1" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">25° / 32°</text>
+<text x="81.1" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">25° / 33°</text>
 <text x="187.4" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-27</text>
 <text x="187.4" y="96" font-size="24" text-anchor="middle">🌡</text>
 <text x="187.4" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">25° / 32°</text>
@@ -11,15 +11,15 @@
 <text x="293.7" y="96" font-size="24" text-anchor="middle">⛈</text>
 <text x="293.7" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">26° / 29°</text>
 <text x="400.0" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-29</text>
-<text x="400.0" y="96" font-size="24" text-anchor="middle">🌡</text>
-<text x="400.0" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">26° / 34°</text>
+<text x="400.0" y="96" font-size="24" text-anchor="middle">⛈</text>
+<text x="400.0" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">26° / 33°</text>
 <text x="506.3" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-30</text>
-<text x="506.3" y="96" font-size="24" text-anchor="middle">☁️</text>
-<text x="506.3" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">26° / 34°</text>
+<text x="506.3" y="96" font-size="24" text-anchor="middle">⛈</text>
+<text x="506.3" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">26° / 32°</text>
 <text x="612.6" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-31</text>
 <text x="612.6" y="96" font-size="24" text-anchor="middle">☁️</text>
 <text x="612.6" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">24° / 33°</text>
 <text x="718.9" y="66" font-size="12" fill="#8b949e" text-anchor="middle">09-01</text>
 <text x="718.9" y="96" font-size="24" text-anchor="middle">🌡</text>
-<text x="718.9" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">24° / 32°</text>
+<text x="718.9" y="124" font-size="13" fill="#c9d1d9" text-anchor="middle">23° / 31°</text>
 </svg>
