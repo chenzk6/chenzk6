@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="150" viewBox="0 0 800 150" font-family="'Segoe UI', system-ui, sans-serif">
 <rect x="0" y="0" width="800" height="150" rx="12" fill="#ffffff"/>
 <text x="28" y="34" font-size="14" font-weight="600" fill="#8b949e"><tspan fill="#2da44e">&#9646;</tspan> 杭州天气 · Hangzhou · 2026-08-27</text>
-<text x="81.1" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-27</text>
-<text x="81.1" y="96" font-size="24" text-anchor="middle">🌡</text>
-<text x="81.1" y="124" font-size="13" fill="#57606a" text-anchor="middle">26° / 33°</text>
-<text x="187.4" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-28</text>
+<text x="81.1" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-28</text>
+<text x="81.1" y="96" font-size="24" text-anchor="middle">⛈</text>
+<text x="81.1" y="124" font-size="13" fill="#57606a" text-anchor="middle">26° / 31°</text>
+<text x="187.4" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-29</text>
 <text x="187.4" y="96" font-size="24" text-anchor="middle">⛈</text>
-<text x="187.4" y="124" font-size="13" fill="#57606a" text-anchor="middle">25° / 31°</text>
-<text x="293.7" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-29</text>
-<text x="293.7" y="96" font-size="24" text-anchor="middle">🌡</text>
-<text x="293.7" y="124" font-size="13" fill="#57606a" text-anchor="middle">26° / 34°</text>
-<text x="400.0" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-30</text>
+<text x="187.4" y="124" font-size="13" fill="#57606a" text-anchor="middle">26° / 33°</text>
+<text x="293.7" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-30</text>
+<text x="293.7" y="96" font-size="24" text-anchor="middle">⛈</text>
+<text x="293.7" y="124" font-size="13" fill="#57606a" text-anchor="middle">26° / 33°</text>
+<text x="400.0" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-31</text>
 <text x="400.0" y="96" font-size="24" text-anchor="middle">⛈</text>
-<text x="400.0" y="124" font-size="13" fill="#57606a" text-anchor="middle">24° / 33°</text>
-<text x="506.3" y="66" font-size="12" fill="#8b949e" text-anchor="middle">08-31</text>
-<text x="506.3" y="96" font-size="24" text-anchor="middle">🌡</text>
-<text x="506.3" y="124" font-size="13" fill="#57606a" text-anchor="middle">25° / 32°</text>
-<text x="612.6" y="66" font-size="12" fill="#8b949e" text-anchor="middle">09-01</text>
+<text x="400.0" y="124" font-size="13" fill="#57606a" text-anchor="middle">25° / 33°</text>
+<text x="506.3" y="66" font-size="12" fill="#8b949e" text-anchor="middle">09-01</text>
+<text x="506.3" y="96" font-size="24" text-anchor="middle">⛈</text>
+<text x="506.3" y="124" font-size="13" fill="#57606a" text-anchor="middle">23° / 30°</text>
+<text x="612.6" y="66" font-size="12" fill="#8b949e" text-anchor="middle">09-02</text>
 <text x="612.6" y="96" font-size="24" text-anchor="middle">⛈</text>
-<text x="612.6" y="124" font-size="13" fill="#57606a" text-anchor="middle">24° / 32°</text>
-<text x="718.9" y="66" font-size="12" fill="#8b949e" text-anchor="middle">09-02</text>
+<text x="612.6" y="124" font-size="13" fill="#57606a" text-anchor="middle">23° / 25°</text>
+<text x="718.9" y="66" font-size="12" fill="#8b949e" text-anchor="middle">09-03</text>
 <text x="718.9" y="96" font-size="24" text-anchor="middle">⛈</text>
-<text x="718.9" y="124" font-size="13" fill="#57606a" text-anchor="middle">23° / 24°</text>
+<text x="718.9" y="124" font-size="13" fill="#57606a" text-anchor="middle">23° / 26°</text>
 </svg>
