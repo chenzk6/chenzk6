@@ -4,6 +4,7 @@
   <text x="28" y="72" font-size="16" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">robonix <tspan fill="#8b949e" font-weight="400" font-size="12">· fork</tspan></text>
   <text x="772" y="72" text-anchor="end" font-size="13" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#8b949e">&#9733; 0</text>
   <text x="28" y="92" font-size="12" fill="#c9d1d9">Embodied AI Operating System (EAIOS)</text>
+  <circle cx="30" cy="106" r="4" fill="#dea584"/><text x="42" y="110" font-size="12" fill="#8b949e">Rust</text>
   <text x="28" y="132" font-size="16" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">xiuos</text>
   <text x="772" y="132" text-anchor="end" font-size="13" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#8b949e">&#9733; 0</text>
   <text x="28" y="152" font-size="12" fill="#c9d1d9">Cartesian coordinate robot control</text>
