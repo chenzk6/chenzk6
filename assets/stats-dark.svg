@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="196" viewBox="0 0 800 196" font-family="'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif">
   <rect x="0" y="0" width="800" height="196" rx="12" fill="#0d1117"/>
 <text x="28" y="38" font-size="14" font-weight="600" fill="#8b949e"><tspan fill="#3fb950">&#9646;</tspan> GitHub Stats</text>
-  <text x="121.0" y="80" text-anchor="middle" font-size="28" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">0</text>
+  <text x="121.0" y="80" text-anchor="middle" font-size="28" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">1</text>
   <text x="121.0" y="106" text-anchor="middle" font-size="13" fill="#8b949e">Stars</text>
   <text x="307.0" y="80" text-anchor="middle" font-size="28" font-weight="700" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" fill="#3fb950">1</text>
   <text x="307.0" y="106" text-anchor="middle" font-size="13" fill="#8b949e">Forks</text>
