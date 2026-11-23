@@ -4,7 +4,6 @@
   <rect x="310.0" y="70.0" width="24.0" height="126.0" rx="3" fill="#2da44e"/>
   <rect x="340.0" y="70.0" width="24.0" height="126.0" rx="3" fill="#dafbe1"/>
   <rect x="460.0" y="70.0" width="24.0" height="126.0" rx="3" fill="#dafbe1"/>
-  <rect x="520.0" y="70.0" width="24.0" height="126.0" rx="3" fill="#dafbe1"/>
   <text x="40.0" y="214" font-size="10" text-anchor="middle" fill="#8b949e">0</text>
   <text x="220.0" y="214" font-size="10" text-anchor="middle" fill="#8b949e">6</text>
   <text x="400.0" y="214" font-size="10" text-anchor="middle" fill="#8b949e">12</text>
